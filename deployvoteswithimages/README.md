@@ -14,7 +14,7 @@ Run in this directory to build and run the app:
 docker compose up
 ```
 
-The `vote` app will be running at [http://localhost:5000](http://localhost:5000), and the `results` will be at [http://localhost:5001](http://localhost:5001).
+The `vote` app will be running at [http://localhost:randomport], and the `results` will be at [http://localhost:5001](http://localhost:8081).
 
 Alternately, if you want to run it on a [Docker Swarm](https://docs.docker.com/engine/swarm/), first make sure you have a swarm. If you don't, run:
 
@@ -38,7 +38,7 @@ Run the following command to create the deployments and services. Note it will c
 kubectl create -f k8s-specifications/
 ```
 
-The `vote` web app is then available on port 31000 on each host of the cluster, the `result` web app is available on port 31001.
+The `vote` web app is then available on port 80 on each host of the cluster, the `result` web app is available on port 8081.
 
 To remove them, run:
 
