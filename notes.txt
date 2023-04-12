@@ -1,0 +1,13 @@
+Promethues & Grafana
+Prometheus is used to monitor the services, both EC2 and docker containers, where as Grafana is used to visualize the server
+health. Prom by default runs on 9090 port and grafana runs on 3000 port. To scrape the matrices, prom uses node-exporter which
+gives the server matrices. We can have multiple job_names with multiple targets. For scrapping ngnix logs, we can use nginx 
+scrapper. For docker matrices scrapping we can use caadvisor. 
+Link to the video for setting up is - https://www.youtube.com/watch?v=wFMEoWpVOYw
+Link to setting up ngnix matrix - https://medium.com/@parthyadav3105/quick-reference-for-collecting-nginx-metrics-using-prometheus-9cf6592bab93
+We need to open ports 9090 internally for servers running in same location to communicate with Promethues.
+To start prometheus download  prometheus, unzip it and go inside the set up and run the command prometheus & Also check the promethus.yml file
+To start grafana, download it and unzip it. Go inside to /bin folder and run ./grafana &
+Also install node exporter to export the server matrices.
+You can skip promo and grafana set up if you are using docker compose set up 
+You can use votes application to test the docker matrices 
